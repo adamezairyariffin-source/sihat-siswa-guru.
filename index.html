@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b4f91">
+<title>SIHAT | Strategi Penjagaan Kesihatan Siswa Guru</title>
+<style>
+:root{--navy:#082b52;--blue:#1267b2;--sky:#55b9ed;--ice:#eef8ff;--white:#fff;--ink:#15324d;--muted:#60758b;--line:#d8eafa;--shadow:0 18px 50px #0b47751b;--radius:24px;--motion:1}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:86px}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:linear-gradient(180deg,#f5fbff,#eaf5ff 55%,#fff);overflow-x:hidden}
+a{color:inherit}button{font:inherit}.site-nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:13px clamp(18px,5vw,72px);background:#f7fcffe8;backdrop-filter:blur(16px);border-bottom:1px solid #dcecf8}
+.brand{font-weight:900;letter-spacing:.12em;color:var(--navy);text-decoration:none}.brand span{color:var(--blue)}.navlinks{display:flex;gap:22px;align-items:center;flex-wrap:wrap}.navlinks a{text-decoration:none;font-size:.9rem;font-weight:700;color:#42617d;position:relative;padding:8px 0}.navlinks a:after{content:"";position:absolute;left:0;bottom:1px;width:0;height:2px;background:var(--blue);transition:.25s}.navlinks a:hover:after,.navlinks a:focus-visible:after{width:100%}
+.hero{position:relative;isolation:isolate;min-height:650px;padding:90px clamp(20px,8vw,120px) 80px;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:40px;overflow:hidden;background:radial-gradient(circle at 78% 32%,#69c5f355,transparent 28%),linear-gradient(130deg,#082b52,#0b5595 60%,#1682bd);color:#fff}
+.hero:before,.hero:after{content:"";position:absolute;border:1px solid #ffffff30;border-radius:50%;z-index:-1;animation:orbit 24s linear infinite}.hero:before{width:440px;height:440px;right:6%;top:8%}.hero:after{width:580px;height:580px;right:1%;top:-3%;animation-direction:reverse}
+@keyframes orbit{to{transform:rotate(360deg)}}.eyebrow{display:inline-flex;gap:9px;align-items:center;padding:8px 13px;border:1px solid #ffffff55;border-radius:99px;background:#ffffff12;font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+h1{font-size:clamp(3.2rem,7.4vw,7rem);line-height:.94;letter-spacing:-.065em;margin:24px 0;font-weight:950;text-shadow:0 2px 0 #7ebce0,0 5px 0 #14558b,0 12px 28px #001a36a8;animation:rise .9s both}
+h1 em{font-style:normal;color:#a9e5ff;display:block}.hero p{font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.8;color:#e0f3ff;max-width:640px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 19px;border-radius:999px;text-decoration:none;font-weight:800;border:1px solid transparent;cursor:pointer;transition:transform .22s,box-shadow .22s,background .22s}.btn:hover{transform:translateY(-3px);box-shadow:0 12px 25px #001c3940}.btn-light{background:#fff;color:var(--navy)}.btn-ghost{border-color:#ffffff70;color:#fff;background:#ffffff10}.hero-art{display:grid;place-items:center;min-height:330px;position:relative}.health-orb{width:min(340px,75vw);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 28%,#ffffff,#9fe1ff 20%,#278dcb 58%,#0a3767 78%);box-shadow:inset -25px -28px 50px #052b56a8,0 35px 80px #00152e80;animation:float 6s ease-in-out infinite}.health-orb b{font-size:clamp(4rem,10vw,7rem);filter:drop-shadow(0 10px 12px #06345a55)}.orbit-label{position:absolute;padding:10px 14px;border-radius:14px;background:#ffffffdf;color:var(--navy);font-weight:850;box-shadow:var(--shadow)}.ol1{top:10%;left:2%}.ol2{bottom:13%;right:0}
+@keyframes float{50%{transform:translateY(-13px)}}@keyframes rise{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+section{padding:82px clamp(20px,7vw,100px)}.section-head{max-width:760px;margin:0 auto 38px;text-align:center}.kicker{color:var(--blue);font-size:.78rem;letter-spacing:.16em;font-weight:900;text-transform:uppercase}.section-head h2{font-size:clamp(2rem,4vw,3.5rem);letter-spacing:-.045em;color:var(--navy);margin:12px 0}.section-head p{color:var(--muted);line-height:1.75}
+.intro-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.mini-card,.strategy-card,.info-panel,.quiz-box,.ref-card{background:#ffffffd9;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+.mini-card{padding:25px}.mini-card .icon{font-size:2rem}.mini-card h3{color:var(--navy);margin:12px 0 8px}.mini-card p{color:var(--muted);line-height:1.7;margin:0}
+.strategy-section{background:#f5fbff}.strategy-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.strategy-card{padding:26px;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s;transform-style:preserve-3d}.strategy-card:hover{transform:translateY(-7px) rotateX(1deg);box-shadow:0 25px 55px #0b47752b}.strategy-card .num{font-size:.78rem;font-weight:900;letter-spacing:.12em;color:var(--blue)}.strategy-card h3{font-size:1.35rem;color:var(--navy);margin:10px 0}.strategy-card p,.strategy-card li{color:#526b82;line-height:1.7}.strategy-card ul{padding-left:20px}.strategy-card .tag{display:inline-block;margin-top:10px;padding:7px 10px;border-radius:99px;background:#e5f4ff;color:#17629d;font-size:.76rem;font-weight:800}.detail-btn{margin-top:15px;border:0;background:var(--navy);color:white;padding:10px 14px;border-radius:12px;cursor:pointer;font-weight:800}.detail-btn:hover{background:var(--blue)}
+.callout{margin:28px auto 0;max-width:900px;padding:22px 25px;border-radius:18px;background:#e3f4ff;border-left:5px solid var(--blue);color:#345875;line-height:1.7}
+.wash-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch}.info-panel{padding:27px}.info-panel h3{color:var(--navy);margin-top:0}.info-panel p,.info-panel li{line-height:1.75;color:#526b82}.pill-row{display:flex;flex-wrap:wrap;gap:8px}.pill{background:#e7f5ff;color:#175e96;border-radius:99px;padding:8px 12px;font-size:.82rem;font-weight:800}
+.quiz-section{background:linear-gradient(135deg,#082b52,#0d609d);color:#fff}.quiz-section .section-head h2,.quiz-section .section-head p{color:#fff}.quiz-box{max-width:850px;margin:auto;padding:28px;color:var(--ink)}.quiz-top{display:flex;justify-content:space-between;gap:12px;align-items:center;color:var(--muted);font-weight:800;font-size:.9rem}.progress{height:8px;background:#e5eff7;border-radius:20px;overflow:hidden;margin:14px 0 25px}.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#1674bd,#62c7f0);transition:width .3s}.question{font-size:1.25rem;font-weight:850;color:var(--navy);line-height:1.5}.answers{display:grid;gap:10px;margin:20px 0}.answer{padding:13px 15px;text-align:left;border:1px solid var(--line);background:#f7fbff;border-radius:13px;cursor:pointer;color:#294a67;font-weight:650}.answer:hover{border-color:var(--blue);background:#eaf6ff}.answer.selected{border-color:var(--blue);background:#e0f2ff}.answer:disabled{cursor:default}.feedback{min-height:28px;font-weight:750;color:#17629d}.quiz-controls{display:flex;justify-content:space-between;gap:12px;align-items:center}.quiz-controls .btn{background:var(--navy);color:#fff}.quiz-controls .btn:disabled{opacity:.4;cursor:not-allowed}
+.references{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.ref-card{padding:20px}.ref-card h3{margin:0 0 8px;color:var(--navy);font-size:1rem}.ref-card p{color:var(--muted);font-size:.9rem;line-height:1.6}.ref-card a{color:var(--blue);font-weight:800;text-decoration:none}.ref-card a:hover{text-decoration:underline}
+footer{padding:30px 20px;text-align:center;background:#061f3c;color:#c7e4f8;font-size:.9rem}.footer-note{opacity:.8;line-height:1.7}
+.modal{position:fixed;inset:0;z-index:100;display:none;place-items:center;padding:20px;background:#03172dc9;backdrop-filter:blur(8px)}.modal.open{display:grid}.modal-card{width:min(650px,100%);max-height:85vh;overflow:auto;background:#fff;border-radius:24px;padding:28px;box-shadow:0 30px 100px #00162d80;animation:pop .25s ease}.modal-card h3{color:var(--navy);font-size:1.5rem;margin-top:0}.modal-card p,.modal-card li{line-height:1.75;color:#526b82}.modal-close{float:right;border:0;background:#e9f4fc;border-radius:50%;width:38px;height:38px;font-size:1.2rem;cursor:pointer;color:var(--navy)}@keyframes pop{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:scale(1)}}
+.reveal{opacity:1;transform:none}.js-motion .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}.js-motion .reveal.visible{opacity:1;transform:translateY(0)}
+.motion-toggle{position:fixed;right:16px;bottom:16px;z-index:60;border:1px solid #cce2f3;background:#fff;color:var(--navy);padding:10px 14px;border-radius:99px;box-shadow:var(--shadow);font-size:.82rem;font-weight:850;cursor:pointer}
+body.reduce-motion *,body.reduce-motion *:before,body.reduce-motion *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+@media(max-width:850px){.hero{grid-template-columns:1fr;text-align:center;padding-top:70px}.hero p{margin-inline:auto}.hero-actions{justify-content:center}.hero-art{min-height:280px}.intro-grid{grid-template-columns:1fr}.strategy-grid,.wash-grid,.references{grid-template-columns:1fr}.navlinks{gap:12px}.navlinks a{font-size:.8rem}}
+@media(max-width:560px){.site-nav{align-items:flex-start;flex-direction:column;gap:7px}.navlinks{width:100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px}.navlinks a{white-space:nowrap}.hero{min-height:unset}.hero:before,.hero:after{right:-30%}.hero-art{min-height:230px}.health-orb{width:220px}.ol1{left:0}.ol2{right:0}.quiz-box{padding:19px}.quiz-controls{flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body class="js-motion">
+<nav class="site-nav" aria-label="Navigasi utama">
+<a class="brand" href="#utama">SIHAT<span>.</span></a>
+<div class="navlinks">
+<a href="#pengenalan">Pengenalan</a><a href="#strategi">Strategi</a><a href="#wash">WASH & Sphere</a><a href="#kuiz">Kuiz</a><a href="#rujukan">Rujukan</a>
+</div>
+</nav>
+<header class="hero" id="utama">
+<div>
+<div class="eyebrow">✦ Panduan kesejahteraan siswa guru</div>
+<h1>SIHAT<br><em>MINDA.</em><br>SIHAT FIZIKAL.</h1>
+<p>Kesihatan yang seimbang membantu siswa guru belajar, beraktiviti dan menjalankan tanggungjawab dengan lebih baik. Mulakan dengan amalan kecil yang konsisten.</p>
+<div class="hero-actions"><a class="btn btn-light" href="#strategi">Teroka 5 strategi ↓</a><a class="btn btn-ghost" href="#kuiz">Cuba kuiz interaktif</a></div>
+</div>
+<div class="hero-art" aria-label="Ilustrasi kesejahteraan">
+<div class="health-orb"><b>✚</b></div><div class="orbit-label ol1">🧠 Kesihatan mental</div><div class="orbit-label ol2">💙 Kesihatan fizikal</div>
+</div>
+</header>
+
+<section id="pengenalan">
+<div class="section-head reveal"><div class="kicker">01 / Kenali kepentingannya</div><h2>Kesejahteraan bermula dengan keseimbangan</h2><p>Kesihatan mental dan fizikal saling berkait. Siswa guru perlu menjaga kedua-duanya supaya dapat menghadapi tuntutan pembelajaran, latihan perguruan dan kehidupan kampus.</p></div>
+<div class="intro-grid">
+<article class="mini-card reveal"><div class="icon">🧠</div><h3>Mental</h3><p>Keupayaan mengurus emosi, menghadapi tekanan dan mendapatkan bantuan apabila diperlukan.</p></article>
+<article class="mini-card reveal"><div class="icon">🏃</div><h3>Fizikal</h3><p>Penjagaan tubuh melalui aktiviti fizikal, pemakanan seimbang, rehat dan kebersihan diri.</p></article>
+<article class="mini-card reveal"><div class="icon">🤝</div><h3>Sosial</h3><p>Hubungan positif, rasa saling menyokong dan persekitaran kampus yang selamat serta bersih.</p></article>
+</div>
+<div class="callout reveal"><strong>Matlamat:</strong> Membina rutin sihat yang realistik, bukan mengejar kesempurnaan. Pilih amalan yang sesuai dengan keperluan, kemampuan dan keadaan diri.</div>
+</section>
+
+<section class="strategy-section" id="strategi">
+<div class="section-head reveal"><div class="kicker">02 / Amalan harian</div><h2>Lima strategi penjagaan kesihatan</h2><p>Pilih mana-mana kad untuk membaca penerangan dan contoh amalan yang boleh dilakukan dalam kehidupan kampus.</p></div>
+<div class="strategy-grid">
+<article class="strategy-card reveal"><div class="num">STRATEGI 01 · MENTAL</div><h3>🧘 Mengurus tekanan dan emosi</h3><p>Kenal pasti perkara yang mencetuskan tekanan dan susun tugasan mengikut keutamaan. Ambil jeda pendek untuk bertenang apabila diperlukan.</p><ul><li>Bina jadual belajar yang realistik.</li><li>Bahagikan tugasan besar kepada langkah kecil.</li><li>Amalkan pernafasan perlahan atau aktiviti menenangkan.</li></ul><span class="tag">Asas: panduan pengurusan tekanan WHO</span><br><button class="detail-btn" data-detail="stress">Lihat penerangan lanjut ↗</button></article>
+<article class="strategy-card reveal"><div class="num">STRATEGI 02 · SOSIAL</div><h3>🤝 Membina sokongan sosial</h3><p>Hubungan yang positif membantu siswa guru berasa didengari dan tidak menghadapi cabaran seorang diri.</p><ul><li>Berbincang dengan rakan atau ahli keluarga yang dipercayai.</li><li>Dapatkan bimbingan pensyarah atau kaunselor kampus.</li><li>Hormati perasaan dan batasan orang lain.</li></ul><span class="tag">Asas: hubungan sosial dan kesejahteraan WHO</span><br><button class="detail-btn" data-detail="support">Lihat penerangan lanjut ↗</button></article>
+<article class="strategy-card reveal"><div class="num">STRATEGI 03 · PEMAKANAN</div><h3>🥗 Mengamalkan pemakanan seimbang</h3><p>Pemakanan yang pelbagai dan seimbang membekalkan tenaga serta nutrien untuk aktiviti pembelajaran dan harian.</p><ul><li>Pelbagaikan buah-buahan dan sayur-sayuran.</li><li>Pilih sumber protein dan bijirin yang sesuai.</li><li>Minum air dengan mencukupi dan amalkan kebersihan makanan.</li></ul><span class="tag">Asas: prinsip diet sihat WHO</span><br><button class="detail-btn" data-detail="food">Lihat penerangan lanjut ↗</button></article>
+<article class="strategy-card reveal"><div class="num">STRATEGI 04 · AKTIVITI</div><h3>🚶 Melakukan aktiviti fizikal</h3><p>Pergerakan harian seperti berjalan kaki, berbasikal atau bersukan menyokong kesihatan tubuh dan kesejahteraan mental.</p><ul><li>Pilih aktiviti yang digemari dan sesuai dengan kemampuan.</li><li>Berjalan kaki ke kelas jika keadaan mengizinkan.</li><li>Kurangkan tempoh duduk terlalu lama dengan bangun bergerak.</li></ul><span class="tag">Asas: garis panduan aktiviti fizikal WHO</span><br><button class="detail-btn" data-detail="activity">Lihat penerangan lanjut ↗</button></article>
+<article class="strategy-card reveal"><div class="num">STRATEGI 05 · REHAT & KEBERSIHAN</div><h3>🌙 Menjaga tidur, rehat dan kebersihan</h3><p>Rutin tidur yang konsisten dan persekitaran bersih membantu tubuh pulih serta mengurangkan risiko penyakit.</p><ul><li>Kekalkan waktu tidur dan bangun yang teratur.</li><li>Kurangkan penggunaan skrin sebelum tidur.</li><li>Basuh tangan dengan sabun dan jaga kebersihan ruang belajar.</li></ul><span class="tag">Asas: WHO, WASH dan prinsip Sphere</span><br><button class="detail-btn" data-detail="rest">Lihat penerangan lanjut ↗</button></article>
+</div>
+<div class="callout reveal"><strong>Nota aktiviti fizikal:</strong> Bagi orang dewasa berumur 18–64 tahun, WHO mengesyorkan 150–300 minit aktiviti aerobik intensiti sederhana seminggu, atau 75–150 minit aktiviti intensiti tinggi, atau gabungan setara. Mulakan secara beransur-ansur mengikut kemampuan. <a href="https://www.who.int/publications/i/item/9789240015128" target="_blank" rel="noopener">Rujuk garis panduan WHO</a>.</div>
+</section>
+
+<section id="wash">
+<div class="section-head reveal"><div class="kicker">03 / Asas teori dan aplikasi</div><h2>Bagaimana WHO, WASH dan Sphere digunakan?</h2><p>Teori dan standard ini menjadi asas untuk menukar pengetahuan kesihatan kepada amalan yang boleh dilaksanakan di kampus.</p></div>
+<div class="wash-grid">
+<div class="info-panel reveal"><h3>WHO · Kesihatan menyeluruh</h3><p>WHO menyediakan panduan berasaskan bukti tentang pengurusan tekanan, pemakanan sihat, tidur dan aktiviti fizikal. Dalam konteks siswa guru, panduan ini boleh diterjemahkan kepada rutin belajar, rehat dan aktiviti harian yang seimbang.</p><div class="pill-row"><span class="pill">Pengurusan tekanan</span><span class="pill">Pemakanan</span><span class="pill">Aktiviti fizikal</span><span class="pill">Tidur</span></div></div>
+<div class="info-panel reveal"><h3>WASH · Air, sanitasi dan kebersihan</h3><p>WASH merujuk kepada <em>Water, Sanitation and Hygiene</em>. Amalan yang relevan di kampus termasuk akses kepada air bersih, tandas yang bersih, kemudahan mencuci tangan dan pendidikan kebersihan.</p><div class="pill-row"><span class="pill">Air bersih</span><span class="pill">Sanitasi</span><span class="pill">Cuci tangan</span><span class="pill">Kebersihan ruang</span></div></div>
+<div class="info-panel reveal"><h3>Sphere · Standard kemanusiaan</h3><p Sphere Handbook menghimpunkan standard minimum bagi tindak balas kemanusiaan, termasuk bekalan air, sanitasi dan promosi kebersihan, makanan dan pemakanan serta kesihatan. Untuk tugasan ini, prinsip WASH boleh dijadikan rujukan amalan kebersihan kampus; Sphere bukan peraturan khusus operasi kampus.</p><div class="pill-row"><span class="pill">Air</span><span class="pill">Sanitasi</span><span class="pill">Promosi kebersihan</span></div></div>
+<div class="info-panel reveal"><h3>Aplikasi dalam komuniti kampus</h3><ul><li>Sediakan kemudahan air minuman dan tandas yang diselenggara.</li><li>Letakkan peringatan amalan mencuci tangan di lokasi sesuai.</li><li>Wujudkan budaya saling menyokong dan saluran bantuan yang diketahui pelajar.</li><li>Galakkan aktiviti fizikal yang inklusif dan sesuai dengan kemampuan.</li></ul></div>
+</div>
+</section>
+
+<section class="quiz-section" id="kuiz">
+<div class="section-head reveal"><div class="kicker" style="color:#a9e5ff">04 / Uji kefahaman</div><h2>Kuiz mini: Siswa Guru Sihat</h2><p>Jawab lima soalan untuk menguji pemahaman tentang strategi penjagaan kesihatan.</p></div>
+<div class="quiz-box reveal">
+<div class="quiz-top"><span id="q-counter">Soalan 1 daripada 5</span><span id="q-score">Skor: 0</span></div><div class="progress"><span id="q-progress"></span></div>
+<div class="question" id="q-text">Apakah tindakan yang sesuai apabila tugasan akademik terasa membebankan?</div>
+<div class="answers" id="q-answers"></div><div class="feedback" id="q-feedback" aria-live="polite"></div>
+<div class="quiz-controls"><button class="btn" id="q-restart" type="button">Mula semula</button><button class="btn" id="q-next" type="button" disabled>Seterusnya →</button></div>
+</div>
+</section>
+
+<section id="rujukan">
+<div class="section-head reveal"><div class="kicker">05 / Sumber rujukan</div><h2>Rujukan dan bacaan lanjut</h2><p>Gunakan sumber rasmi berikut untuk menyemak panduan kesihatan yang menjadi asas kandungan laman ini.</p></div>
+<div class="references">
+<article class="ref-card reveal"><h3>World Health Organization. (2026). Stress.</h3><p>Penerangan tentang tekanan, rutin harian, tidur, hubungan sosial, pemakanan dan aktiviti fizikal.</p><a href="https://www.who.int/news-room/questions-and-answers/item/stress" target="_blank" rel="noopener">Baca sumber WHO ↗</a></article>
+<article class="ref-card reveal"><h3>World Health Organization. (2026). Healthy diet.</h3><p>Prinsip diet sihat: kecukupan, keseimbangan, kesederhanaan dan kepelbagaian.</p><a href="https://www.who.int/news-room/fact-sheets/detail/healthy-diet" target="_blank" rel="noopener">Baca sumber WHO ↗</a></article>
+<article class="ref-card reveal"><h3>World Health Organization. (2020). WHO guidelines on physical activity and sedentary behaviour.</h3><p>Garis panduan aktiviti fizikal dan tingkah laku sedentari.</p><a href="https://www.who.int/publications/i/item/9789240015128" target="_blank" rel="noopener">Baca garis panduan ↗</a></article>
+<article class="ref-card reveal"><h3>Sphere Association. (2018). The Sphere Handbook.</h3><p>Piagam kemanusiaan dan standard minimum, termasuk WASH, makanan dan pemakanan serta kesihatan.</p><a href="https://spherestandards.org/handbook/" target="_blank" rel="noopener">Baca Sphere Handbook ↗</a></article>
+</div>
+<div class="callout reveal"><strong>Peringatan:</strong> Bahan ini ialah pendidikan kesihatan umum dan bukan pengganti nasihat profesional. Jika tekanan atau masalah kesihatan mengganggu kehidupan harian, dapatkan bantuan daripada kaunselor, pegawai kesihatan atau profesional yang berkelayakan.</div>
+</section>
+<footer><div class="footer-note"><strong>SIHAT SISWA GURU</strong><br>Strategi Penjagaan Kesihatan Mental & Fizikal<br>Produk digital interaktif · GKKO1062 · PPISMP<br><small>Nama pelajar: [Isi nama] · Kumpulan: [Isi kumpulan]</small></div></footer>
+
+<div class="modal" id="detail-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+<div class="modal-card"><button class="modal-close" id="modal-close" aria-label="Tutup">×</button><h3 id="modal-title"></h3><div id="modal-body"></div></div>
+</div>
+<button class="motion-toggle" id="motion-toggle" type="button">Matikan animasi</button>
+<script>
+const details={
+stress:{title:"Strategi 1 · Mengurus tekanan dan emosi",body:"<p>Tekanan boleh berlaku apabila seseorang berhadapan tuntutan atau situasi yang mencabar. Langkah yang boleh dicuba ialah:</p><ul><li>Senaraikan tugasan dan tentukan keutamaan.</li><li>Bahagikan tugasan besar kepada bahagian yang lebih kecil.</li><li>Ambil rehat pendek dan lakukan pernafasan perlahan.</li><li>Jika tekanan berterusan atau menjejaskan rutin, berbincang dengan kaunselor atau profesional.</li></ul><p><strong>Aplikasi kampus:</strong> Gunakan perancang mingguan dan tetapkan masa belajar, rehat serta aktiviti sosial.</p>"},
+support:{title:"Strategi 2 · Membina sokongan sosial",body:"<p>Sokongan sosial boleh membantu seseorang berasa didengari dan mendapat perspektif atau bantuan yang sesuai.</p><ul><li>Kenal pasti individu yang dipercayai seperti rakan, keluarga atau pensyarah.</li><li>Sertai aktiviti kampus yang positif dan inklusif.</li><li>Dengar rakan tanpa menghakimi dan hormati privasi mereka.</li><li>Rujuk kaunselor apabila memerlukan sokongan lanjut.</li></ul><p><strong>Aplikasi kampus:</strong> Bentuk kumpulan belajar yang saling membantu dan amalkan komunikasi berhemah.</p>"},
+food:{title:"Strategi 3 · Pemakanan seimbang",body:"<p>WHO menerangkan bahawa diet sihat berasaskan kecukupan, keseimbangan, kesederhanaan dan kepelbagaian.</p><ul><li>Ambil pelbagai jenis makanan daripada kumpulan makanan yang berbeza.</li><li>Masukkan buah-buahan, sayur-sayuran, bijirin dan sumber protein dalam pilihan makanan.</li><li>Hadkan makanan yang tinggi garam, gula bebas dan lemak tidak sihat.</li><li>Utamakan kebersihan semasa penyediaan dan penyimpanan makanan.</li></ul><p><strong>Aplikasi kampus:</strong> Rancang pilihan makanan yang seimbang mengikut kemampuan dan kemudahan yang ada.</p>"},
+activity:{title:"Strategi 4 · Aktiviti fizikal",body:"<p>Aktiviti fizikal merangkumi pergerakan ketika bersukan, berjalan, berbasikal dan melakukan tugasan harian. WHO menyatakan bahawa sebarang aktiviti adalah lebih baik daripada tiada aktiviti.</p><ul><li>Pilih aktiviti yang disukai dan sesuai dengan tahap kecergasan.</li><li>Mulakan dengan tempoh yang selesa dan tingkatkan secara beransur-ansur.</li><li>Selang-selikan tempoh duduk yang panjang dengan bangun dan bergerak.</li><li>Jika mempunyai keadaan kesihatan tertentu, dapatkan panduan profesional tentang aktiviti yang sesuai.</li></ul><p><strong>Aplikasi kampus:</strong> Berjalan bersama rakan, menyertai sukan rekreasi atau menggunakan laluan pejalan kaki yang selamat.</p>"},
+rest:{title:"Strategi 5 · Tidur, rehat dan kebersihan",body:"<p>Tidur dan kebersihan persekitaran ialah sebahagian daripada penjagaan kesihatan harian.</p><ul><li>Kekalkan waktu tidur dan bangun yang konsisten.</li><li>Wujudkan ruang tidur yang selesa dan kurangkan gangguan skrin sebelum tidur.</li><li>Basuh tangan dengan sabun pada waktu yang sesuai, khususnya sebelum makan dan selepas menggunakan tandas.</li><li>Pastikan ruang belajar, tandas dan kawasan bersama bersih.</li><li>Gunakan air yang selamat dan laporkan kerosakan kemudahan sanitasi.</li></ul><p><strong>Aplikasi kampus:</strong> Amalkan kebersihan diri dan tanggungjawab bersama terhadap kemudahan kampus.</p>"}
+};
+const modal=document.getElementById('detail-modal');
+document.querySelectorAll('[data-detail]').forEach(btn=>btn.addEventListener('click',()=>{const d=details[btn.dataset.detail];document.getElementById('modal-title').textContent=d.title;document.getElementById('modal-body').innerHTML=d.body;modal.classList.add('open');document.getElementById('modal-close').focus()}));
+function closeModal(){modal.classList.remove('open')}
+document.getElementById('modal-close').addEventListener('click',closeModal);
+modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+const questions=[
+{q:"Apakah tindakan yang sesuai apabila tugasan akademik terasa membebankan?",a:["Mengabaikan semua tugasan","Menyusun keutamaan dan membahagikan tugasan kepada langkah kecil","Tidak berehat langsung"],c:1,why:"Perancangan dan langkah kecil membantu mengurus tuntutan dengan lebih teratur."},
+{q:"Apakah maksud WASH?",a:["Water, Sanitation and Hygiene","Wellness and Student Health","Work, Activity and Sleep Habits"],c:0,why:"WASH merujuk kepada air, sanitasi dan kebersihan."},
+{q:"Antara berikut, yang manakah prinsip diet sihat menurut WHO?",a:["Kepelbagaian dan keseimbangan","Mengambil satu jenis makanan sahaja","Mengabaikan kebersihan makanan"],c:0,why:"WHO menekankan kecukupan, keseimbangan, kesederhanaan dan kepelbagaian."},
+{q:"Bagi orang dewasa, berapakah saranan WHO untuk aktiviti aerobik intensiti sederhana seminggu?",a:["30–60 minit","150–300 minit","600–900 minit"],c:1,why:"WHO mengesyorkan 150–300 minit seminggu bagi orang dewasa."},
+{q:"Apakah tindakan sesuai jika masalah emosi berterusan dan mengganggu kehidupan harian?",a:["Memendamnya seorang diri","Menyalahkan diri sendiri","Mendapatkan sokongan daripada kaunselor atau profesional"],c:2,why:"Mendapatkan sokongan yang sesuai ialah langkah yang wajar."}
+];
+let qi=0,score=0,chosen=null,answered=false;
+const qText=document.getElementById('q-text'),qAnswers=document.getElementById('q-answers'),qFeedback=document.getElementById('q-feedback'),qNext=document.getElementById('q-next');
+function renderQ(){const q=questions[qi];chosen=null;answered=false;document.getElementById('q-counter').textContent=`Soalan ${qi+1} daripada ${questions.length}`;document.getElementById('q-score').textContent=`Skor: ${score}`;document.getElementById('q-progress').style.width=`${qi/questions.length*100}%`;qText.textContent=q.q;qFeedback.textContent='';qAnswers.innerHTML='';q.a.forEach((a,i)=>{const b=document.createElement('button');b.className='answer';b.textContent=`${String.fromCharCode(65+i)}. ${a}`;b.addEventListener('click',()=>choose(i));qAnswers.appendChild(b)});qNext.disabled=true;qNext.textContent=qi===questions.length-1?'Lihat keputusan':'Seterusnya →'}
+function choose(i){if(answered)return;answered=true;chosen=i;const q=questions[qi];[...qAnswers.children].forEach((b,j)=>{b.disabled=true;if(j===q.c)b.classList.add('selected')});if(i===q.c){score++;qFeedback.textContent='Betul! '+q.why}else{qFeedback.textContent='Belum tepat. '+q.why}document.getElementById('q-score').textContent=`Skor: ${score}`;qNext.disabled=false}
+qNext.addEventListener('click',()=>{if(!answered)return;if(qi<questions.length-1){qi++;renderQ()}else{document.getElementById('q-progress').style.width='100%';qText.textContent=`Kuiz selesai! Skor anda: ${score}/${questions.length}`;qAnswers.innerHTML='<p>Terima kasih kerana mencuba. Ulang kaji strategi dan sumber rujukan untuk mengukuhkan pemahaman.</p>';qFeedback.textContent='';qNext.disabled=true;qNext.textContent='Selesai'}})
+document.getElementById('q-restart').addEventListener('click',()=>{qi=0;score=0;renderQ()});renderQ();
+const toggle=document.getElementById('motion-toggle');
+toggle.addEventListener('click',()=>{document.body.classList.toggle('reduce-motion');const off=document.body.classList.contains('reduce-motion');toggle.textContent=off?'Hidupkan animasi':'Matikan animasi'});
+const prefersReduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;if(prefersReduced){document.body.classList.add('reduce-motion');toggle.textContent='Hidupkan animasi'}
+if('IntersectionObserver'in window&&!prefersReduced){const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el))}
+</script>
+</body></html>
